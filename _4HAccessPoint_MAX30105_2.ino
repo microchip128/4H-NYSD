@@ -49,7 +49,7 @@ float temperature;
 /* Set these to your desired credentials. */
 const char *ssid = "4H4Health";
 //const char *password = "thereisnospoon";
-String htmlText = " <h1>You are connected to 4H4Health!</h1> <br> ";
+String htmlText = (" <h1>You are connected to 4H4Health! <br> </h1> ");
 
 ESP8266WebServer server(80);
 
@@ -57,17 +57,21 @@ ESP8266WebServer server(80);
  * connected to this access point to see it.
  */
 void handleRoot() {
-	//server.send(200, "text/html",
+	
 //	"<h1>You are connected to 4H4Health!</h1> <br> <h1>your heart rate is:</h1>");
-htmlText.concat("<h1><Your heart rate is: ");
+htmlText.concat("<br> <h1>Your heart rate is: ");
 htmlText.concat(String (int (beatAvg)));
-htmlText.concat(" </h1>");
+htmlText.concat(" </h1> ");
+
+server.send(200, "text/html" , htmlText);
+//htmlText.concat(",  ");
+/*
 htmlText.concat("<br>");
 htmlText.concat("<h1>your temperature is:  ");
 htmlText.concat(String (temperature));
 htmlText.concat("</h1>");
-  server.send(200, "text/html" , htmlText);
-htmlText.concat(",  ");
+*/
+
 
 }
 
