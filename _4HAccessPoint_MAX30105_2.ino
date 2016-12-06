@@ -62,14 +62,14 @@ void handleRoot() {
 htmlText.concat("<br> <h1>Your heart rate is: ");
 htmlText.concat(String (int (beatAvg)));
 htmlText.concat(" </h1> ");
-
-server.send(200, "text/html" , htmlText);
-//htmlText.concat(",  ");
-/*
 htmlText.concat("<br>");
 htmlText.concat("<h1>your temperature is:  ");
 htmlText.concat(String (temperature));
 htmlText.concat("</h1>");
+
+server.send(200, "text/html" , htmlText);
+/*
+
 */
 
 
