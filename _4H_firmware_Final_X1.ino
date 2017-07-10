@@ -1,7 +1,4 @@
-/*
-   Jeff's notes= not working because of Char conversion, need to figure our casting new char?
 
-*/
 //#include <SoftwareSerial.h>
 
 /*
