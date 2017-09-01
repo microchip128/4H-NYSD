@@ -153,7 +153,7 @@ void setup() {
   pinMode(13, INPUT_PULLUP);//jumper for SSID
   pinMode(16, INPUT_PULLUP);//jumper for SSID
   pinMode(12, INPUT_PULLUP);// sets pin for tilt switch counter
-  strcpy( ssid,  "Incredible Wearables");
+  strcpy( ssid,  "Incredible Wearables(a)");
   for (int checkPins = 0; checkPins < 5; checkPins++)
   {
     giveSSID();
@@ -234,17 +234,17 @@ void giveSSID()
   delay(100);
   if (digitalRead(13) == LOW)
   {
-    strcpy (ssid, "Incredible Wearables1");
+    strcpy (ssid, "Incredible Wearables1(a)");
   }
   delay(100);
   if (digitalRead(12) == LOW)//***change digitalRead(4) == LOW to digitalRead(12) == LOW
   {
-    strcpy (ssid, "Incredible Wearables2");
+    strcpy (ssid, "Incredible Wearables2(a)");
   }
   delay(100);
   if (digitalRead(16) == LOW)
   {
-    strcpy (ssid, "Incredible Wearables3");
+    strcpy (ssid, "Incredible Wearables3(a)");
   }
 
 }
